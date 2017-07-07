@@ -19,7 +19,7 @@ export class LiveviewComponent implements OnInit {
 
   capture() {
     this.smile = true;
-    this.cameraService.capture().subscribe(() => {
+    this.cameraService.capture().then(() => {
       alert("captured");
       this.smile = false;
     });
@@ -27,13 +27,13 @@ export class LiveviewComponent implements OnInit {
 
   ngOnInit() {
     this.smile = false;
-    this.cameraService.enableLiveview().subscribe(() => {
+    this.cameraService.enableLiveview().then(() => {
       this.previewUrl = this.cameraService.previewStreamUrl();
     });
   }
 
   ngOnDestroy() {
-    this.cameraService.disableLiveview().subscribe();
+    this.cameraService.disableLiveview();
   }
 
 }

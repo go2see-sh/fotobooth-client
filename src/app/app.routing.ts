@@ -5,6 +5,7 @@ import { StartupComponent } from './startup/startup.component';
 import { LiveviewComponent } from './liveview/liveview.component';
 import { EditorComponent } from './editor/editor.component';
 import { SummaryComponent } from './summary/summary.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   imports: [
@@ -29,6 +30,10 @@ import { SummaryComponent } from './summary/summary.component';
       {
         path: 'summary',
         component: SummaryComponent
+      },
+      {
+        path: 'admin',
+        component: AdminComponent
       }
     ])
   ],

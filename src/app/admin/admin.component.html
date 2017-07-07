@@ -1,0 +1,32 @@
+<div class="panel">
+  <h1>Camera Exposure Settings</h1>
+
+  <h2>Shutter Speed</h2>
+  <ul>
+    <li *ngFor="let option of exposure?.shutterspeed?.options" (click)="setShutterspeed(option)" [ngClass]="{'selected': exposure?.shutterspeed?.value === option}">
+      {{option}}
+    </li>
+  </ul>
+
+
+  <h2>Aperture</h2>
+  <ul>
+    <li *ngFor="let option of exposure?.aperture?.options" (click)="setAperture(option)" [ngClass]="{'selected': exposure?.aperture?.value === option}">
+      {{option}}
+    </li>
+  </ul>
+
+  <h2>ISO</h2>
+  <ul>
+    <li *ngFor="let option of exposure?.iso?.options" (click)="setIso(option)" [ngClass]="{'selected': exposure?.iso?.value === option}">
+      {{option}}
+    </li>
+  </ul>
+
+  <h2>Presets</h2>
+  <ul>
+    <li *ngFor="let preset of presets" (click)="setPreset(preset)">
+      {{preset}}
+    </li>
+  </ul>
+</div>

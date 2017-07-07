@@ -5,7 +5,7 @@ export interface IAppConfig {
 };
 
 export const FotomatConfig: IAppConfig = {
-  apiEndpoint: 'http://localhost:1234'
+  apiEndpoint: 'http://localhost:8000'
 };
 
 export let APP_CONFIG = new InjectionToken<IAppConfig>('app.config');
