@@ -1,32 +1,89 @@
-<div class="panel">
-  <h1>Camera Exposure Settings</h1>
+<div class="mdl-layout__container">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-drawer-button
 
-  <h2>Shutter Speed</h2>
-  <ul>
-    <li *ngFor="let option of exposure?.shutterspeed?.options" (click)="setShutterspeed(option)" [ngClass]="{'selected': exposure?.shutterspeed?.value === option}">
-      {{option}}
-    </li>
-  </ul>
+">
+    <header class="mdl-layout__header is-casting-shadow">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Camera Exposure Settings</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="page-content">
 
+        <div class="mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Shutter Speed</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <ul class="mdl-list">
+              <li *ngFor="let option of exposure?.shutterspeed?.options" (click)="setShutterspeed(option)" [ngClass]="{'selected': exposure?.shutterspeed?.value === option}">
+                {{option}}
+              </li>
+            </ul>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Apply
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+          </div>
+        </div>
 
-  <h2>Aperture</h2>
-  <ul>
-    <li *ngFor="let option of exposure?.aperture?.options" (click)="setAperture(option)" [ngClass]="{'selected': exposure?.aperture?.value === option}">
-      {{option}}
-    </li>
-  </ul>
+        <div class="mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Aperture</h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <ul class="mdl-list">
+              <li *ngFor="let option of exposure?.aperture?.options" (click)="setAperture(option)" [ngClass]="{'selected': exposure?.aperture?.value === option}">
+                {{option}}
+              </li>
+            </ul>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              Apply
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+          </div>
+        </div>
 
-  <h2>ISO</h2>
-  <ul>
-    <li *ngFor="let option of exposure?.iso?.options" (click)="setIso(option)" [ngClass]="{'selected': exposure?.iso?.value === option}">
-      {{option}}
-    </li>
-  </ul>
+      <div class="mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">ISO</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <ul class="mdl-list">
+            <li *ngFor="let option of exposure?.iso?.options" (click)="setIso(option)" [ngClass]="{'selected': exposure?.iso?.value === option}">
+              {{option}}
+            </li>
+          </ul>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Apply
+          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+        </div>
+      </div>
 
-  <h2>Presets</h2>
-  <ul>
-    <li *ngFor="let preset of presets" (click)="setPreset(preset)">
-      {{preset}}
-    </li>
-  </ul>
+      <div class="mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">Presets</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <ul class="mdl-list">
+            <li *ngFor="let preset of presets" (click)="setPreset(preset)">
+              {{preset}}
+            </li>
+          </ul>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Apply
+          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></a>
+        </div>
+      </div>
+
+      </div>
+    </main>
+    <div class="mdl-layout__obfuscator"></div>
+  </div>
 </div>

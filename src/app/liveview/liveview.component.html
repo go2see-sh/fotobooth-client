@@ -1,4 +1,4 @@
-<img class="preview" src="{{previewUrl}}" (click)="capture()" />
+<img class="preview" *ngIf="previewUrl" src="{{previewUrl}}" (click)="capture()" />
 
 <div class="countdown" *ngIf="smile">
   <strong>Bitte<br>in die Kamera<br>lächeln!</strong>

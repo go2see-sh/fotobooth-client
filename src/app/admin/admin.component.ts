@@ -17,22 +17,26 @@ export class AdminComponent implements OnInit {
   }
 
   setShutterspeed(value) {
-    this.cameraService.setShutterspeed(value);
+    this.cameraService.setShutterspeed(value).then(this.init);
   }
 
   setAperture(value) {
-    this.cameraService.setAperture(value);
+    this.cameraService.setAperture(value).then(this.init);
   }
 
   setIso(value) {
-    this.cameraService.setIso(value);
+    this.cameraService.setIso(value).then(this.init);
   }
 
   setPreset(preset) {
-    this.cameraService.setPreset(preset);
+    this.cameraService.setPreset(preset).then(this.init);
   }
 
   ngOnInit() {
+    this.init();
+  }
+
+  private init() {
     this.cameraService.getExposure().then(exposure => {
       this.exposure = exposure;
     });

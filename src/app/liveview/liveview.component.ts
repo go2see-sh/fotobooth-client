@@ -29,6 +29,7 @@ export class LiveviewComponent implements OnInit {
     this.smile = false;
     this.cameraService.enableLiveview().then(() => {
       this.previewUrl = this.cameraService.previewStreamUrl();
+      console.log(this.previewUrl);
     });
   }
 

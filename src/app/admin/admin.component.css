@@ -5,11 +5,20 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: #1d1d1d;
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 :host .selected {
     font-weight: bold;
     font-size: 20px;
+}
+
+:host .mdl-card {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+:host .page-content {
+    padding: 20px;
 }
