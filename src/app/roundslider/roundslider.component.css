@@ -1,0 +1,7 @@
+:host {
+    text-align: center;
+}
+
+:host .rs-control {
+    margin: 0 auto 0;
+}

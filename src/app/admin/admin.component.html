@@ -15,11 +15,12 @@
             <h2 class="mdl-card__title-text">Shutter Speed</h2>
           </div>
           <div class="mdl-card__supporting-text">
-            <ul class="mdl-list">
+            <fotomat-roundslider [values]="exposure?.shutterspeed?.options" [selected]="exposure?.shutterspeed?.value" (changed)="onShutterspeedChanged($event)"></fotomat-roundslider>
+            <!--ul class="mdl-list">
               <li *ngFor="let option of exposure?.shutterspeed?.options" (click)="setShutterspeed(option)" [ngClass]="{'selected': exposure?.shutterspeed?.value === option}">
                 {{option}}
               </li>
-            </ul>
+            </ul-->
           </div>
           <div class="mdl-card__actions mdl-card--border">
             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
@@ -33,11 +34,12 @@
             <h2 class="mdl-card__title-text">Aperture</h2>
           </div>
           <div class="mdl-card__supporting-text">
-            <ul class="mdl-list">
+            <fotomat-roundslider [values]="exposure?.aperture?.options" [selected]="exposure?.aperture?.value" (changed)="onApertureChanged($event)"></fotomat-roundslider>
+            <!--ul class="mdl-list">
               <li *ngFor="let option of exposure?.aperture?.options" (click)="setAperture(option)" [ngClass]="{'selected': exposure?.aperture?.value === option}">
                 {{option}}
               </li>
-            </ul>
+            </ul-->
           </div>
           <div class="mdl-card__actions mdl-card--border">
             <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
@@ -51,11 +53,12 @@
           <h2 class="mdl-card__title-text">ISO</h2>
         </div>
         <div class="mdl-card__supporting-text">
-          <ul class="mdl-list">
+          <fotomat-roundslider [values]="exposure?.iso?.options" [selected]="exposure?.iso?.value" (changed)="onIsoChanged($event)"></fotomat-roundslider>
+          <!--ul class="mdl-list">
             <li *ngFor="let option of exposure?.iso?.options" (click)="setIso(option)" [ngClass]="{'selected': exposure?.iso?.value === option}">
               {{option}}
             </li>
-          </ul>
+          </ul-->
         </div>
         <div class="mdl-card__actions mdl-card--border">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">

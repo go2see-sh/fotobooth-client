@@ -11,6 +11,7 @@ import { LiveviewComponent } from './liveview/liveview.component';
 import { EditorComponent } from './editor/editor.component';
 import { SummaryComponent } from './summary/summary.component';
 import { AdminComponent } from './admin/admin.component';
+import { RoundsliderComponent } from './roundslider/roundslider.component';
 
 import { CameraService } from './camera.service';
 
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app.routing';
     LiveviewComponent,
     EditorComponent,
     SummaryComponent,
-    AdminComponent
+    AdminComponent,
+    RoundsliderComponent
   ],
   imports: [
     BrowserModule,
