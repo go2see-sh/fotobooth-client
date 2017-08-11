@@ -21,7 +21,8 @@ export class AdminComponent implements OnInit {
   }
 
   setShutterspeed(value) {
-    this.cameraService.setShutterspeed(value).then(this.init.apply(this));
+    var self = this;
+    this.cameraService.setShutterspeed(value).then(() => this.init());
   }
 
   onApertureChanged(event) {
@@ -29,7 +30,7 @@ export class AdminComponent implements OnInit {
   }
 
   setAperture(value) {
-    this.cameraService.setAperture(value).then(this.init.apply(this));
+    this.cameraService.setAperture(value).then(() => this.init());
   }
 
   onIsoChanged(event) {
@@ -37,11 +38,11 @@ export class AdminComponent implements OnInit {
   }
 
   setIso(value) {
-    this.cameraService.setIso(value).then(this.init.apply(this));
+    this.cameraService.setIso(value).then(() => this.init());
   }
 
   setPreset(preset) {
-    this.cameraService.setPreset(preset).then(this.init.apply(this));
+    this.cameraService.setPreset(preset).then(() => this.init());
   }
 
   ngOnInit() {

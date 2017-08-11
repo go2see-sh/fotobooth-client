@@ -34,7 +34,7 @@ export class CameraService {
   getPresets(): Promise<any> {
     return this.http.get(this.config.apiEndpoint + '/presets')
       .toPromise()
-      .then(response => response.json())
+      .then(response => response.json());
   }
 
   setPreset(preset): Promise<any> {
@@ -52,18 +52,18 @@ export class CameraService {
   setShutterspeed(shutterspeed: string): Promise<any> {
     return this.http.post(this.config.apiEndpoint + '/shutterspeed', {
       value: shutterspeed
-    }).toPromise()
+    }).toPromise();
   }
 
   setAperture(aperture: string): Promise<any> {
     return this.http.post(this.config.apiEndpoint + '/aperture', {
       value: aperture
-    }).toPromise()
+    }).toPromise();
   }
 
   setIso(iso: string): Promise<any> {
     return this.http.post(this.config.apiEndpoint + '/iso', {
       value: iso
-    }).toPromise()
+    }).toPromise();
   }
 }
